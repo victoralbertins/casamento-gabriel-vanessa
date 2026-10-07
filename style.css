@@ -396,5 +396,5 @@ input:focus, select:focus, textarea:focus {
 
 @media (max-width: 420px) {
   .rsvp { padding: 24px 18px 26px; }
-  .botao { letter-spacing: .1em; gap: 10px; padding: 14px 18px; }
+  .botao { font-size: 1rem; letter-spacing: .08em; gap: 10px; padding: 14px 18px; white-space: nowrap; }
 }

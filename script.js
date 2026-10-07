@@ -46,31 +46,11 @@
   document.getElementById("prazo").textContent = cfg.PRAZO || "a data combinada";
 
   const form = document.getElementById("form");
-  const blocoSim = document.getElementById("bloco-sim");
-  const qtd = document.getElementById("quantidade");
-  const campoAcomp = document.getElementById("campo-acomp");
   const erro = document.getElementById("erro");
   const botao = document.getElementById("enviar");
   const obrigado = document.getElementById("obrigado");
 
-  for (let i = 1; i <= (cfg.MAX_PESSOAS || 6); i++) {
-    qtd.add(new Option(i === 1 ? "Só eu" : i + " pessoas", i));
-  }
-
-  form.addEventListener("change", (e) => {
-    if (e.target.name === "presenca") blocoSim.hidden = e.target.value !== "sim";
-    if (e.target === qtd) campoAcomp.hidden = Number(qtd.value) <= 1;
-    if (e.target.classList) e.target.classList.remove("invalido");
-  });
-
-  // máscara simples de telefone brasileiro
-  form.telefone.addEventListener("input", (e) => {
-    const d = e.target.value.replace(/\D/g, "").slice(0, 11);
-    let v = d;
-    if (d.length > 2) v = "(" + d.slice(0, 2) + ") " + d.slice(2);
-    if (d.length > 7) v = "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
-    e.target.value = v;
-  });
+  form.addEventListener("input", (e) => e.target.classList.remove("invalido"));
 
   function mostrarErro(msg, campo) {
     erro.textContent = msg;
@@ -83,20 +63,15 @@
     erro.hidden = true;
 
     const nome = form.nome.value.trim();
-    const telefone = form.telefone.value.trim();
     const presenca = form.presenca.value;
 
     if (nome.length < 3) return mostrarErro("Por favor, informe seu nome completo.", form.nome);
-    if (telefone.replace(/\D/g, "").length < 10) return mostrarErro("Por favor, informe um WhatsApp válido com DDD.", form.telefone);
     if (!presenca) return mostrarErro("Conte pra gente se você poderá vir.");
 
     const vem = presenca === "sim";
     const dados = {
       nome,
-      telefone,
       presenca: vem ? "Sim" : "Não",
-      quantidade: vem ? qtd.value : "0",
-      acompanhantes: vem && Number(qtd.value) > 1 ? form.acompanhantes.value.trim() : "",
       mensagem: form.mensagem.value.trim(),
       enviadoEm: new Date().toISOString(),
     };
@@ -132,8 +107,6 @@
 
   document.getElementById("nova").addEventListener("click", () => {
     form.reset();
-    blocoSim.hidden = true;
-    campoAcomp.hidden = true;
     obrigado.hidden = true;
     form.hidden = false;
     form.nome.focus();

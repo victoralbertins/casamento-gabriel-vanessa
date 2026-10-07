@@ -7,7 +7,7 @@ Site de confirmação de presença (RSVP) do casamento de Gabriel & Vanessa, com
 - Data, local e horários (cerimônia às 17h, recepção às 19h na Chácara Dornellas)
 - Contagem regressiva
 - Botões para salvar a data no Google Agenda ou no Apple/Outlook (.ics)
-- Formulário de RSVP: nome, WhatsApp, presença, número de pessoas, acompanhantes e mensagem
+- Formulário de RSVP: nome, presença e mensagem opcional
 
 É um site estático (HTML, CSS e JS), sem build. Para ver localmente, basta abrir o `index.html` no navegador.
 
@@ -29,10 +29,10 @@ Sem essa configuração, o formulário roda em **modo demonstração**: mostra a
 4. Autorize o acesso e copie a URL gerada (termina em `/exec`).
 5. Cole essa URL em `ENDPOINT`, no arquivo [`config.js`](config.js), e faça commit.
 
-As respostas caem na aba **Confirmações** da planilha. Lá dá para filtrar por presença e somar a coluna *Pessoas* para chegar ao total de convidados.
+As respostas caem na aba **Confirmações** da planilha (colunas: Recebido em, Nome, Presença, Mensagem). Lá dá para filtrar por presença.
 
 ## Personalizar
 
-- `config.js`: endpoint, número máximo de pessoas por resposta e prazo para confirmar.
+- `config.js`: endpoint e prazo para confirmar.
 - `style.css`: as cores ficam nas variáveis do `:root`.
 - `assets/`: as imagens recortadas do convite original (`convite-original.jpg`).

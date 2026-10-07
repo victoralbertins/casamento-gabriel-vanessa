@@ -3,7 +3,7 @@
  * Como usar: veja a seção "Salvando as respostas" no README.
  */
 const ABA = "Confirmações";
-const COLUNAS = ["Recebido em", "Nome", "WhatsApp", "Presença", "Pessoas", "Acompanhantes", "Mensagem"];
+const COLUNAS = ["Recebido em", "Nome", "Presença", "Mensagem"];
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -13,10 +13,7 @@ function doPost(e) {
     abaConfirmacoes_().appendRow([
       new Date(),
       limpar_(p.nome),
-      limpar_(p.telefone),
       limpar_(p.presenca),
-      Number(p.quantidade) || 0,
-      limpar_(p.acompanhantes),
       limpar_(p.mensagem),
     ]);
     return ContentService.createTextOutput(JSON.stringify({ ok: true }))

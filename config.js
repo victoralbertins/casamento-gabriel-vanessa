@@ -4,9 +4,6 @@ window.CONFIG = {
   // Enquanto estiver vazio, o formulário funciona em modo de demonstração (não salva nada).
   ENDPOINT: "https://script.google.com/macros/s/AKfycbxKHP10xTNdd64tFdPuHF1WefOBGob-VehTNtFpoPb_bfRBUIZhsgMkc0BQP7RX-LZ6/exec",
 
-  // Máximo de pessoas por confirmação (incluindo quem está respondendo).
-  MAX_PESSOAS: 6,
-
   // Data limite para confirmar (exibida no site).
   PRAZO: "31 de dezembro de 2026",
 };
