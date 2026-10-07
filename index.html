@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabriel &amp; Vanessa · 13.03.2027</title>
+  <meta name="description" content="Pré-save do casamento de Gabriel & Vanessa — 13 de março de 2027, Vicência – PE. Confirme sua presença.">
+  <meta property="og:title" content="Gabriel & Vanessa · 13.03.2027">
+  <meta property="og:description" content="Nosso grande dia está chegando! Confirme sua presença.">
+  <meta property="og:image" content="assets/convite-original.jpg">
+  <meta name="theme-color" content="#f6eee3">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img class="folhas folhas-esq" src="assets/folhas-esq.webp" alt="" aria-hidden="true">
+  <img class="folhas folhas-dir" src="assets/folhas-dir.webp" alt="" aria-hidden="true">
+
+  <main class="papel">
+    <header class="hero">
+      <img class="igreja" src="assets/igreja.webp" alt="Aquarela da igreja com os noivos de mãos dadas sobre um caminho de pétalas">
+
+      <div class="titulo">
+        <p class="selo"><span>Pré-save</span></p>
+        <h1>Gabriel <span class="e">&amp;</span> Vanessa</h1>
+        <p class="data">13 . 03 . 2027</p>
+        <p class="frase">Nosso grande dia está chegando!</p>
+        <div class="divisor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+      </div>
+    </header>
+
+    <section class="detalhes" aria-label="Detalhes do evento">
+      <div class="item">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div><strong class="grande">Vicência – PE</strong></div>
+      </div>
+      <div class="item">
+        <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v6M13 5h6M16 8l-7 7v14h14V15zM5 29V19l4-4M27 29V19l-4-4M3 29h26M13 29v-6a3 3 0 0 1 6 0v6"/></svg>
+        <div><span>Cerimônia</span><strong class="grande">17h</strong></div>
+      </div>
+      <div class="item">
+        <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h6l-.5 7a2.5 2.5 0 0 1-5 0zM11 12.5V27M8 27h6M18 3h6l.5 7a2.5 2.5 0 0 1-5 0zM21.5 12.5V27M18.5 27h6M6 2l-2-1M16 4V1M26 2l2-1"/></svg>
+        <div><span>Recepção</span><strong class="grande">19h</strong><small>Chácara Dornellas</small></div>
+      </div>
+    </section>
+
+    <section class="contagem" aria-label="Contagem regressiva">
+      <div><b id="cd-dias">–</b><span>dias</span></div>
+      <div><b id="cd-horas">–</b><span>horas</span></div>
+      <div><b id="cd-min">–</b><span>minutos</span></div>
+    </section>
+
+    <section class="aviso">
+      <p class="pincel">Este não é o convite oficial.</p>
+      <p>É apenas um <strong>pré-save</strong> para que vocês possam <strong>reservar essa data na agenda</strong> e nos informar se poderão estar conosco nesse momento tão especial.</p>
+      <div class="agenda">
+        <a id="btn-google" class="link-agenda" target="_blank" rel="noopener">Google Agenda</a>
+        <span aria-hidden="true">·</span>
+        <a id="btn-ics" class="link-agenda" download="casamento-gabriel-vanessa.ics">Apple / Outlook (.ics)</a>
+      </div>
+    </section>
+
+    <section class="faixa">
+      <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM2 28c0-5 4-9 9-9s9 4 9 9zM21 15a5 5 0 1 0 0-10M24 19c3.5 1 6 4.5 6 9h-6"/></svg>
+      <p><span class="maior">A confirmação de presença</span><br>neste momento é muito importante<br>para nossa organização.</p>
+    </section>
+
+    <section id="confirmar" class="rsvp" aria-labelledby="rsvp-titulo">
+      <h2 id="rsvp-titulo">Confirme sua presença</h2>
+      <p class="prazo">Por favor, responda até <span id="prazo"></span>.</p>
+
+      <form id="form" novalidate>
+        <label class="campo">
+          <span>Nome completo</span>
+          <input name="nome" autocomplete="name" required>
+        </label>
+
+        <label class="campo">
+          <span>WhatsApp</span>
+          <input name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(81) 9 0000-0000" required>
+        </label>
+
+        <fieldset class="campo">
+          <legend>Você poderá estar conosco?</legend>
+          <div class="opcoes">
+            <label class="opcao"><input type="radio" name="presenca" value="sim" required><span>Sim, estarei lá! ♡</span></label>
+            <label class="opcao"><input type="radio" name="presenca" value="nao"><span>Infelizmente não poderei</span></label>
+          </div>
+        </fieldset>
+
+        <div id="bloco-sim" hidden>
+          <label class="campo">
+            <span>Quantas pessoas (contando com você)?</span>
+            <select name="quantidade" id="quantidade"></select>
+          </label>
+          <label class="campo" id="campo-acomp" hidden>
+            <span>Nome dos acompanhantes</span>
+            <textarea name="acompanhantes" rows="2" placeholder="Um nome por linha"></textarea>
+          </label>
+        </div>
+
+        <label class="campo">
+          <span>Deixe uma mensagem para os noivos <em>(opcional)</em></span>
+          <textarea name="mensagem" rows="3"></textarea>
+        </label>
+
+        <p class="erro" id="erro" role="alert" hidden></p>
+
+        <button type="submit" class="botao" id="enviar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          <span>Confirmar presença</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <div id="obrigado" class="obrigado" hidden tabindex="-1">
+        <div class="divisor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3 id="obrigado-titulo">Obrigado!</h3>
+        <p id="obrigado-texto"></p>
+        <button type="button" class="link-agenda" id="nova">Enviar outra resposta</button>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <div class="divisor pequeno" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+      <p>Este é apenas o nosso PRÉ-SAVE.<br>O convite oficial será enviado posteriormente<br>com todos os detalhes.</p>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
